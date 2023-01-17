@@ -65,13 +65,54 @@
        </div>
    </nav>
     </header>
-
     <main class="content container">
-    <h1>APP UI GOES HERE</h1>
-    <input id="message" placeholder="Enter a Message..." type="text">
-    <button class="btn btn-primary" type="button" id="btnSubmit"> Display a Message</button>
-    </main>
+        <div class="row gy-2 h-100 w-100">
+            <div class="col col-12 border-2 border-end">
+                <h1 class="fw-bold mb-3">FizzBuzz: A Coding Challenge</h1>
+                <h4 class="lead">The Challenge Given two values, display the numbers 1-100. 
+                    When a number is divisible by the first value, display "Fizz" instead. 
+                    When a number is divisible by the second value, display "Buzz" instead. 
+                    When a number is divisible by both values, display "FizzBuzz".
+                </h4>
+                <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+                <p>Enter a fizz value and a buzz value as well as an optional stop value. The code will display the Fizz Buzz values below.</p>
+            </div>
+            <div class="col col-12">
+                <form action="#" class="row gy-2 gx-3">
+                    <div class="col">
+                        <h5>Fizz Value</h5>
+                        <input id="fizzValue" type="number" class="form-control" placeholder="Fizz Value"
+                            aria-label="Fizz Value" value="0" />
+                    </div>
+                    <div class="col">
+                        <h5>Buzz Value</h5>
+                        <input id="buzzValue" type="number" class="form-control" placeholder="Buzz Value"
+                            aria-label="Buzz Value" value="100" />
+                    </div>
+                    <div class="col">
+                        <h5>Stop Value (max: 5000)</h5>
+                        <input id="stopValue" type="number" class="form-control" placeholder="Stop Value"
+                            aria-label="Stop Value" value="100" />
+                    </div>
+                    <div class="col">
+                        <button class="btn buttonColor btn-lg w-100 h-100" id="btnSubmit" type="button">Execute</button>
+                    </div>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tbody id="results">
+                            <!--
+                                    Hundo Here
+                                    <tr><td class="odd">1<td><tr>
+                                    <tr><td class="even">2<td><tr>...
+                                -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+   
 
+</main>
     <footer class="container-fluid footer-main">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-3 align-items-center py-3">

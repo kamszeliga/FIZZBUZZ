@@ -114,3 +114,19 @@ footer {
     font-size: 1.5rem;
 }
 /*END: Footer */ 
+
+.buttonColor {
+    background-color: var(--kls-primary-color) !important;
+}
+
+.fizz {
+    color: var(--kls-primary-color) !important;
+}
+
+.buzz {
+    color: var(--kls-secondary-color) !important;
+}
+
+.fizzbuzz {
+    color: var(--kls-darker-color) !important;
+}
