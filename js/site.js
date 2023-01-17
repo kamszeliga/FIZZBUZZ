@@ -10,9 +10,9 @@ function getValues(){
     endValue = parseInt(endValue);
 
     // verify that inputs are numbers
-    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)){
+    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue) && Number.isInteger(endValue)){
         //IF YES -  generate numbers 
-        let numbersArray = generateNumbers(fizzValue, buzzValue);
+        let numbersArray = generateNumbers(fizzValue, buzzValue, endValue);
         //& display on page
         displayNumbers(numbersArray);
     } else {
@@ -29,11 +29,23 @@ function getValues(){
 }
 
 //generate the numbers within the specified value, stopping at the stop value
-function generateNumbers(start, end){
+function generateNumbers(fizzValue, buzzValue, endValue){
     let numbers = [];
+    let endValue = end;
 
-    for(let value = start; value<= endValue; value++){
+    for(let value = start; value<= end; value++){
         numbers.push(value);
+        if (value % fizzValue == 0){
+            value = 'Fizz'
+        }
+
+        if (index % buzzValue == 0){
+            value = 'Buzz'
+        }
+
+        if (index % buzzValue == 0 && value % fizzValue == 0){
+            value = 'FizzBuzz'
+        }
     }
 
     return numbers; 
@@ -48,7 +60,7 @@ function displayNumbers(numbersArray){
     for(let index = 0; index < numbersArray.length; index++){
         let value = numbersArray[index];
         let className = '';
-        if (value % fizzValue == 0){
+        if (index % fizzValue == 0){
             className = 'fizz';
             value = 'Fizz'
         }
