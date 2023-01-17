@@ -32,7 +32,7 @@ function getValues(){
 function generateNumbers(start, end){
     let numbers = [];
 
-    for(let value = start; value<= end; value++){
+    for(let value = start; value<= endValue; value++){
         numbers.push(value);
     }
 
@@ -50,14 +50,17 @@ function displayNumbers(numbersArray){
         let className = '';
         if (value % fizzValue == 0){
             className = 'fizz';
+            value = 'Fizz'
         }
 
         if (index % buzzValue == 0){
             className = 'buzz';
+            value = 'Buzz'
         }
 
         if (index % buzzValue == 0 && value % fizzValue == 0){
             className = 'fizzbuzz';
+            value = 'FizzBuzz'
         }
 
         let tableRow = `<td class="${className}">${value}</td>`;
