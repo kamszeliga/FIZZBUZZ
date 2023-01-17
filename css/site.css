@@ -120,13 +120,19 @@ footer {
 }
 
 .fizz {
-    color: var(--kls-primary-color) !important;
+    color: var(--kls-dark-color) !important;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .buzz {
-    color: var(--kls-secondary-color) !important;
+    color: var(--kls-dark-color) !important;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .fizzbuzz {
     color: var(--kls-darker-color) !important;
+    font-weight: bolder;
+    font-size: larger;
 }

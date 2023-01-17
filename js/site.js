@@ -1,4 +1,4 @@
-function getValues(){
+function getValues() {
     //get values from the page
     let fizzValue = document.getElementById('fizzValue').value;
     let buzzValue = document.getElementById('buzzValue').value;
@@ -10,7 +10,7 @@ function getValues(){
     endValue = parseInt(endValue);
 
     // verify that inputs are numbers
-    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue) && Number.isInteger(endValue)){
+    if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue) && Number.isInteger(endValue)) {
         //IF YES -  generate numbers 
         let numbersArray = generateNumbers(fizzValue, buzzValue, endValue);
         //& display on page
@@ -25,54 +25,54 @@ function getValues(){
             }
         );
     }
-       
+
 }
 
 //generate the numbers within the specified value, stopping at the stop value
-function generateNumbers(fizzValue, buzzValue, endValue){
+function generateNumbers(fizzValue, buzzValue, endValue) {
     let numbers = [];
-    let endValue = end;
+    let end = endValue;
 
-    for(let value = start; value<= end; value++){
-        numbers.push(value);
-        if (value % fizzValue == 0){
-            value = 'Fizz'
+    for (let value = 1; value <= end; value++) {
+        let newValue = value;
+
+        if (value % fizzValue == 0) {
+            newValue = 'Fizz'
+        }
+        
+        if (value % buzzValue == 0) {
+            newValue = 'Buzz'
+        }
+        
+        if (value % buzzValue == 0 && value % fizzValue == 0) {
+            newValue = 'FizzBuzz'
         }
 
-        if (index % buzzValue == 0){
-            value = 'Buzz'
-        }
-
-        if (index % buzzValue == 0 && value % fizzValue == 0){
-            value = 'FizzBuzz'
-        }
+        numbers.push(newValue);
     }
+    return numbers;
 
-    return numbers; 
 }
 
 //Turns the table appearance into fizz, buzz and fizz buzz
-function displayNumbers(numbersArray){
+function displayNumbers(numbersArray) {
     let tableBody = document.getElementById('results');
 
     let tableHtml = "";
 
-    for(let index = 0; index < numbersArray.length; index++){
+    for (let index = 0; index < numbersArray.length; index++) {
         let value = numbersArray[index];
         let className = '';
-        if (index % fizzValue == 0){
+        if (value == 'Fizz') {
             className = 'fizz';
-            value = 'Fizz'
         }
 
-        if (index % buzzValue == 0){
+        if (value == 'Buzz') {
             className = 'buzz';
-            value = 'Buzz'
         }
 
-        if (index % buzzValue == 0 && value % fizzValue == 0){
+        if (value == 'FizzBuzz') {
             className = 'fizzbuzz';
-            value = 'FizzBuzz'
         }
 
         let tableRow = `<td class="${className}">${value}</td>`;
