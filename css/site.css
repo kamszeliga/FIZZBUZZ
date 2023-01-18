@@ -136,3 +136,13 @@ footer {
     font-weight: bolder;
     font-size: larger;
 }
+
+.fizzbuzz:hover {
+    color: var(--kls-primary-color) !important;
+}
+.fizz:hover {
+    color: var(--kls-primary-color) !important;
+}
+.buzz:hover {
+    color: var(--kls-primary-color) !important;
+}
