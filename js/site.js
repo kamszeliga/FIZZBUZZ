@@ -24,7 +24,7 @@ function getValues() {
                 text: 'That number is waaaay too high! Please enter a value below 5000 for the stop value.',
             }
         );
-    }else {
+    } else {
         //IF NO - tell user they goofed, numbers only 
         Swal.fire(
             {
