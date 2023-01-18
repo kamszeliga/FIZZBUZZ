@@ -15,7 +15,16 @@ function getValues() {
         let numbersArray = generateNumbers(fizzValue, buzzValue, endValue);
         //& display on page
         displayNumbers(numbersArray);
-    } else {
+    } if (endValue > 5000){
+        //IF NO - tell user they goofed
+        Swal.fire(
+            {
+                icon: 'error',
+                title: 'You goofed it...',
+                text: 'That number is waaaay too high! Please enter a value below 5000 for the stop value.',
+            }
+        );
+    }else {
         //IF NO - tell user they goofed, numbers only 
         Swal.fire(
             {
@@ -24,7 +33,8 @@ function getValues() {
                 text: 'Only integers are allowed for this input.',
             }
         );
-    }
+    } 
+    
 
 }
 
