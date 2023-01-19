@@ -24,16 +24,16 @@ function getValues() {
                 text: 'That number is waaaay too high! Please enter a value below 5000 for the stop value.',
             }
         );
-    } else {
-        //IF NO - tell user they goofed, numbers only 
-        Swal.fire(
-            {
-                icon: 'error',
-                title: 'You goofed it...',
-                text: 'Only integers are allowed for this input.',
-            }
-        );
-    } 
+    // } else {
+    //     //IF NO - tell user they goofed, numbers only 
+    //     Swal.fire(
+    //         {
+    //             icon: 'error',
+    //             title: 'You goofed it...',
+    //             text: 'Only integers are allowed for this input.',
+    //         }
+    //     );
+    // } 
     
 
 }
@@ -95,4 +95,4 @@ function displayNumbers(numbersArray) {
     }
 
     tableBody.innerHTML = tableHtml;
-}
+        }}
