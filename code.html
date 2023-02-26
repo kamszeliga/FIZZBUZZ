@@ -178,9 +178,24 @@
             </div>
             <!--Code Description-->
             <div class="col-12 col-lg-4">
-                <p>The code is structured in one function.</p>
-                <h5><code>displayMessage()</code></h5>
-                <p>This function displays the message in a sweet alert.</p>
+                <p>The code is structured into three functions.</p>
+                <h5><code>getValues()</code></h5>
+                <p>This function is ther over arching function which contains all of the code. 
+                    We start by getting the input values and parsing them into integers. This 
+                    beginning part of the code also checks to ensure that the values are in 
+                    fact numbers, giving the user an error if they accidentally entered something 
+                    other than a numerical value.
+                </p>
+                <h5><code>generateNumbers()</code></h5>
+                <p>This function generates what numbers fall under the corresponding fizz, buzz or 
+                    fizzbuzz values. It also ensures that the code will stop at the given stop value.
+                </p>
+                <h5><code>displayNumbers()</code></h5>
+                <p>This last function determines how the values we've calculated will appear on the table. 
+                    It checks each of the above values to see if they are Fizz, Buzz or FizzBuzz so that it 
+                    can assign each of them a corresponding class name. This is so that they will appear differently than other values 
+                    on the table.
+                </p>
             </div>
         </div>
     </main>
